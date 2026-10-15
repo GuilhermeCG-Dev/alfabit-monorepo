@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledButton } from "./Button.styles";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'tertiary';
@@ -19,5 +20,13 @@ export const Button = ({
   disabled,
   onClick,
 }: ButtonProps) => {
-  return <button>Button</button>;
+  return <StyledButton 
+    label={label}
+    variant={variant}
+    size={size}
+    icon={icon}
+    iconPosition={iconPosition}
+    disabled={disabled}
+    onClick={onClick}
+  />;
 }
